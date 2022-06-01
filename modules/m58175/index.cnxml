@@ -1,0 +1,41 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Challenges</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m58175</md:content-id>
+  <md:title>Challenges</md:title>
+  <md:abstract/>
+  <md:uuid>30258d0f-c2fd-4a4f-bdde-84095a090259</md:uuid>
+</metadata>
+
+<content>
+  <code id="eip-288" display="block">asdfasdfhakjsdhfksjdf</code><para id="eip-195">We are attempting to classify and count the different subspecies of WBC in multi-cell images. Therefore, we must divide the process into two subsystems. First, we have to isolate each individual cell from each image. This will be done using centroid detection and masking because in stained cell images, the nucleus of the cell is the most prominent and high contrast feature. We make the assumption that isolating the nucleus leads to isolating the cell. We use a multi-threshold method to isolate the cell. The goal of the isolation algorithm is to accurately separate the cell body from the background and the cell nucleus from the cell body with the appropriate curved boundaries. 
+
+(insert image of mask)
+
+Each isolated cell body and nucleus will be saved as a matrices in grayscale and binary. This results in a total of four processed images per original image. These are needed to extract features relevant to the classification of WBC subtypes. The features include morphological characteristics of both the cell and nuclei. We will implement both support vector machine (SVM) and neural network algorithms with these features. The algorithms are trained with prototypical images of the five cell types and used to classify the cells. Because WBC nuclei are morphologically distinct, we expect that this method will be able to differentiate between the different types. This is challenging because while shape and feature recognition is easy to humans, it is one of the most researched topics in machine learning.
+
+(insert example neural network)
+
+After each cell is classified, we will count the number of each subtype and compare against human results (which one of us will pain-stakingly do). We will test 20 multi-cell images in total to generate accuracy and precision statistics. </para><table id="eip-570" summary="blah">
+<tgroup cols="3"><tbody>
+  <row>
+    <entry>(1,1)</entry>
+    <entry>(1,2)</entry>
+    <entry>(1,3)</entry>
+  </row>
+  <row>
+    <entry>(2,1)</entry>
+    <entry>(2,2)</entry>
+    <entry>(2,3)</entry>
+  </row>
+  <row>
+    <entry>(3,1)</entry>
+    <entry>(3,2)</entry>
+    <entry>(3,3)</entry>
+  </row>
+</tbody>
+</tgroup>
+</table></content>
+
+</document>

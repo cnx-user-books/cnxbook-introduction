@@ -1,0 +1,36 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Previous Work</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m58265</md:content-id>
+  <md:title>Previous Work</md:title>
+  <md:abstract/>
+  <md:uuid>a64808a3-c5d0-4a9a-a426-506bebdb8039</md:uuid>
+</metadata>
+
+<content>
+  <section id="eip-60"><title>Challenges</title><para id="eip-321">
+We are attempting to classify and count the different subspecies of WBC in multi-cell images using morphological features. This is a challenging and ongoing problem explored by many independent researchers, and there is no standard solution. While shape and feature recognition is easy to humans, it is one of the most researched topics in machine learning.
+Most methods divide the process into two subsystems, segmentation and classification.
+</para></section><section id="eip-961"><title>Past Methods</title><para id="eip-318"><title>Segmentation</title>We must segment each cell image into the nucleus and cell body in order to extract features. The first problem is cell isolation. Most researchers cropped the individual cells manually due to the difficulty in isolating overlapping circles (WBCs and red blood cells) which can be seen in Figure 1. Several methods for segmentation have been explored in the literature. 
+</para><para id="eip-819"><media id="overlappingbloodsmear" alt="Overlapping Blood Smear.">
+	   
+  <image mime-type="image/jpeg" src="../../media/CML-blood-smear.jpg"/>
+		 
+</media></para><para id="eip-145">Figure 1. Overlapping can be seen between RBCs and WBCs.</para><para id="eip-703">Green channel filtering is a common way to isolate WBCs in colored blood smear images. Red blood cells (RBCs) and white blood cells separate into two distinct peaks in this space (with number of pixels on the y axis and color value, 0 to 255 on the x axis). The white blood cells have more green content. Furthermore, the WBC nuclei also differ slightly from the cytoplasm in green content. [1] However, this method requires extremely consistent and high quality images due to the subtleties associated with the different cells’ green channel content. </para><para id="eip-192">Grayscale images and thresholding can also be used to separate the RBCs, WBCs, and WBC nuclei. WBC cell bodies appear much darker than RBCs, and WBC nuclei appear darker than cell bodies. Several thresholds can be used to differentiate between the cells. [2] For example, in “White Blood Cell Segmentation Using Morphological Operators and Scale-Space Analysis,” a  hard-coded threshold was used to isolate the first seed. Then, another equation was used to improve the gradient extracted. This was repeated for 10 iterations. [3] This method requires the images to be high resolution, because blur and graininess can cause individual areas of darker or lighter spots.</para><para id="eip-498">Some researchers use a combination of both common methods in order to obtain the best results. They first localize the nuclei using color analysis, and then threshold for finer boundaries. [1]</para></section><section id="eip-662"><title>Past Classification Methods</title><para id="eip-304">We found that many research articles used both morphological and texture features for classification. These are based mostly on nucleus shape. Recall that the subtypes of WBCs have lobed nuclei which differ between the types. In the literature, monocytes are the most difficult to classify, often mistaken lymphocytes and neutrophils. 
+</para><para id="eip-516">Most research papers implement at least ten features. These features must differ significantly between the cell types. They include a variety of area, perimeter, and color characteristics. The papers that used colored images have more features than grayscale due to the differences in color content as mentioned above. Below are example categories that have been explored.
+</para><list id="eip-565"><title>Intensity and color based features</title><item>Mean and variance of color distances for cell, cytoplasm, and nucleus</item></list><list id="eip-978"><title>Texture based features</title><item>Contrast of cytoplasm and nucleus
+</item>
+<item>Homogenicity of cytoplasm and nucleus
+</item>
+<item>Entropy of cytoplasm and nucleus
+</item></list><list id="eip-501"><title>Shape based features</title><item>Area of cell and nucleus</item>
+<item>Ratio of nucleus area over cell area and perimeter length</item>
+<item>Nucleus shape features</item>
+<item>Number of nuclei</item></list><para id="eip-613">Common classification methods include k-nearest neighbors, learning vector quantization, Multi-layer perceptrons, and support vector machine (SVM). These are pattern recognition algorithms, which makes sense for this application. We found that the most successful paper, which used 57 features in total from all three categories above, had an accuracy of 91% for SVM. [3] 
+</para></section><para id="delete_me">
+     <!-- Insert module text here -->
+  </para>
+</content>
+
+</document>

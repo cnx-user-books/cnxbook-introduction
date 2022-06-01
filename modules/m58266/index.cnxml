@@ -1,0 +1,24 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Motivation</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m58266</md:content-id>
+  <md:title>Motivation</md:title>
+  <md:abstract/>
+  <md:uuid>d11dc751-111f-471f-86aa-d19deaec3fb1</md:uuid>
+</metadata>
+
+<content>
+  <section id="eip-761"><title>Importance of White Blood Cell Count</title><para id="eip-144">White blood cells (WBCs), also called leukocytes, are an integral part of the human immune system. These cells fight infections by attacking bacteria, viruses, and other foreign pathogens that invade the body. Having too many or too few white blood cells can indicate a blood disorder. Disorders affecting these cells often result in the body’s inability to eliminate or control infections. [1] Therefore, WBC count is of interest in clinical pathology and oncology.</para><para id="eip-632">A general WBC count can detect hidden infections within the body and alert doctors to undiagnosed medical conditions, such as autoimmune diseases, immune deficiencies, blood disorders, and cancer. However, a WBC count can indicate that there is a disease or condition affecting white blood cells, but it cannot determine the underlying cause. Several other tests may be performed at the same time or in follow up to an abnormal result to help make a diagnosis. One of these tests is a blood smear review. [2] </para></section><section id="eip-503"><title>Blood Smear Test</title><para id="eip-877">A blood smear is a blood test used to look for abnormalities in red blood cells, WBCs, and platelets. The test provides information on the number and shape of these cells, which can help doctors diagnose certain medical conditions. There are five distinct subtypes of WBCs each with a unique nucleus morphology and function. </para><para id="eip-185"><media id="BloodSmear" alt="Blood smear example.">
+	   
+  <image mime-type="image/jpg" src="../../media/Blood-Smear.jpg"/>
+		 
+</media>
+</para><para id="eip-325">Figure 1. Example of stained blood smear slide. [3]</para><para id="eip-91">When stained, these morphological differences become more dramatic and can be seen in Table 1. Abnormalities in the shape or number of WBCs may be signs of the diseases mentioned above. Therefore, it is extremely important to obtain an accurate count of each subtype if any immune-linked disorders are suspected.
+</para><para id="eip-802"><media id="WBCtable" alt="WBC Subtype Table.">
+	   
+  <image mime-type="image/jpg" src="../../media/WBCTable.jpg"/>
+		 
+</media></para><para id="eip-237">Table 1. White blood cell subtypes, functions, and morphology. [1]</para><para id="eip-248">Accurate cell counting is a long and tedious process. Scientists and pathologists individually analyze each cell’s morphology through light microscopy. This can take up to several hours, time that a patient may not have. In addition, since it is a tiring process, observer fatigue can produce inaccurate results. We aim to quantify the morphological differences between the WBC subtypes and classify them in order to aid pathologists. An automatic isolation and classification algorithm would significantly decrease the time needed for a blood smear analysis, leading to faster, potentially life saving results. </para><para id="eip-61"/></section></content>
+
+</document>
